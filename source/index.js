@@ -44,7 +44,7 @@ class Spinner {
 	/**
 	Creates and returns a new instance of the current class
 	@param {...*} args - the arguments to be forwarded along to the constructor
-	@return {Progress}
+	@return {Spinner}
 	@static
 	@public
 	*/
