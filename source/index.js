@@ -27,7 +27,7 @@ const spinners = require('cli-spinners')
  * Create a new Spinner instance, for rendering a spinner into the terminal's title
  * @class
  * @constructor
- * @param {Options} opts
+ * @param {Options} [opts]
  * @public
  */
 class Spinner {
