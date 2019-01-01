@@ -31,7 +31,15 @@ const spinners = require('cli-spinners')
  * @public
  */
 class Spinner {
-	constructor ({ style = 'dots', interval, frames, title = null, stream = process.stderr, open = '\u001b]0;', close = '\u0007' } = {}) {
+	constructor({
+		style = 'dots',
+		interval,
+		frames,
+		title = null,
+		stream = process.stderr,
+		open = '\u001b]0;',
+		close = '\u0007'
+	} = {}) {
 		this.index = 0
 		this.frames = frames || spinners[style].frames
 		this.interval = interval || spinners[style].interval
@@ -48,7 +56,7 @@ class Spinner {
 	@static
 	@public
 	*/
-	static create (...args) {
+	static create(...args) {
 		return new this(...args)
 	}
 
@@ -57,7 +65,7 @@ class Spinner {
 	 * @returns {string} the next frame
 	 * @public
 	 */
-	spin () {
+	spin() {
 		const frame = this.frames[this.index]
 		if (!frame) {
 			this.index = 0
@@ -73,7 +81,7 @@ class Spinner {
 	 * @chainable
 	 * @public
 	 */
-	update () {
+	update() {
 		const title = this.title ? this.title() : this.spin()
 		this.stream.write(this.open + title + this.close)
 		return this
@@ -86,7 +94,7 @@ class Spinner {
 	 * @chainable
 	 * @public
 	 */
-	start () {
+	start() {
 		this.timer = setInterval(() => this.update(), this.interval)
 		return this
 	}
@@ -97,7 +105,7 @@ class Spinner {
 	 * @chainable
 	 * @public
 	 */
-	stop () {
+	stop() {
 		if (this.timer) {
 			clearInterval(this.timer)
 			this.timer = null
