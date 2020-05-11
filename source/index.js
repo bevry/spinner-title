@@ -38,7 +38,7 @@ class Spinner {
 		title = null,
 		stream = process.stderr,
 		open = '\u001b]0;',
-		close = '\u0007'
+		close = '\u0007',
 	} = {}) {
 		this.index = 0
 		this.frames = frames || spinners[style].frames

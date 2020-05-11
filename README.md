@@ -33,6 +33,17 @@ Write your spinner to your terminal's title bar
 <!-- /DESCRIPTION -->
 
 
+## Usage
+
+[Complete API Documentation.](http://master.spinner-title.bevry.surge.sh/docs/index.html)
+
+```javascript
+const spinner = require('spinner')
+    .create(/* see api docs for options */)
+    .start()
+process.on('SIGINT', () => spinner.stop()) // keep going until ctrl+c
+```
+
 <!-- INSTALL/ -->
 
 <h2>Install</h2>
@@ -40,7 +51,8 @@ Write your spinner to your terminal's title bar
 <a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
 <ul>
 <li>Install: <code>npm install --save spinner-title</code></li>
-<li>Require: <code>require('spinner-title')</code></li>
+<li>Import: <code>import * as pkg from ('spinner-title')</code></li>
+<li>Require: <code>const pkg = require('spinner-title')</code></li>
 </ul>
 
 <h3><a href="https://editions.bevry.me" title="Editions are the best way to produce and consume packages you care about.">Editions</a></h3>
@@ -48,9 +60,7 @@ Write your spinner to your terminal's title bar
 <p>This package is published with the following editions:</p>
 
 <ul><li><code>spinner-title</code> aliases <code>spinner-title/source/index.js</code></li>
-<li><code>spinner-title/source/index.js</code> is esnext source code with require for modules</li></ul>
-
-<p>Environments older than Node.js v8 may need <a href="https://babeljs.io/docs/usage/polyfill/" title="A polyfill that emulates missing ECMAScript environment features">Babel's Polyfill</a> or something similar.</p>
+<li><code>spinner-title/source/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> source code for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li></ul>
 
 <h3><a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a></h3>
 
@@ -66,15 +76,6 @@ This project provides its type information via inline <a href="http://usejsdoc.o
 
 <!-- /INSTALL -->
 
-
-## Usage
-
-[API Documentation.](http://master.spinner-title.bevry.surge.sh/docs/)
-
-``` javascript
-const spinner = require('spinner').create(/* see api docs for options */).start()
-process.on('SIGINT', () => spinner.stop()) // keep going until ctrl+c
-```
 
 <!-- HISTORY/ -->
 
@@ -102,7 +103,7 @@ process.on('SIGINT', () => spinner.stop()) // keep going until ctrl+c
 
 These amazing people are maintaining this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/spinner-title/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/spinner-title">view contributions</a></li></ul>
+<ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/spinner-title/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/spinner-title">view contributions</a></li></ul>
 
 <h3>Sponsors</h3>
 
@@ -122,8 +123,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/spinner-title/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/spinner-title">view contributions</a></li>
-<li><a href="http://github.com/apps/dependabot-preview">dependabot-preview[bot]</a> — <a href="https://github.com/bevry/spinner-title/commits?author=dependabot-preview[bot]" title="View the GitHub contributions of dependabot-preview[bot] on repository bevry/spinner-title">view contributions</a></li></ul>
+<ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/spinner-title/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/spinner-title">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/spinner-title/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
