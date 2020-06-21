@@ -1,6 +1,6 @@
 {
   "name": "spinner-title",
-  "version": "3.7.0",
+  "version": "3.8.0",
   "description": "Write your spinner to your terminal's title bar",
   "homepage": "https://github.com/bevry/spinner-title",
   "license": "MIT",
@@ -98,7 +98,7 @@
     "cli-spinners": "^2.3.0"
   },
   "devDependencies": {
-    "@bevry/update-contributors": "1.9.0",
+    "@bevry/update-contributors": "^1.9.0",
     "assert-helpers": "^6.8.0",
     "eslint": "^7.3.0",
     "eslint-config-bevry": "^3.8.0",
@@ -109,7 +109,7 @@
     "prettier": "^2.0.5",
     "projectz": "^2.9.0",
     "surge": "^0.21.3",
-    "valid-directory": "2.2.0"
+    "valid-directory": "^2.5.0"
   },
   "scripts": {
     "our:clean": "rm -Rf ./docs ./edition* ./es2015 ./es5 ./out ./.next",
