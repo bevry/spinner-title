@@ -1,7 +1,7 @@
 'use strict'
 
 const spinners = require('cli-spinners')
-const Spinner = require('./')
+const Spinner = require('./index.js')
 const { equal } = require('assert-helpers')
 const kava = require('kava')
 const { PassThrough } = require('stream')
