@@ -35,7 +35,7 @@ Write your spinner to your terminal's title bar
 
 ## Usage
 
-[Complete API Documentation.](http://master.spinner-title.bevry.surge.sh/docs/index.html)
+[Complete API Documentation.](http://master.spinner-title.bevry.surge.sh/docs/)
 
 ```javascript
 const spinner = require('spinner')
@@ -60,7 +60,7 @@ process.on('SIGINT', () => spinner.stop()) // keep going until ctrl+c
 <p>This package is published with the following editions:</p>
 
 <ul><li><code>spinner-title</code> aliases <code>spinner-title/source/index.js</code></li>
-<li><code>spinner-title/source/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> source code for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 10 || 12 || 14 with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li></ul>
+<li><code>spinner-title/source/index.js</code> is <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> source code for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> 10 || 12 || 14 || 16 with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li></ul>
 
 <h3><a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a></h3>
 

@@ -1,6 +1,6 @@
 {
   "name": "spinner-title",
-  "version": "3.15.0",
+  "version": "3.16.0",
   "description": "Write your spinner to your terminal's title bar",
   "homepage": "https://github.com/bevry/spinner-title",
   "license": "MIT",
@@ -79,7 +79,7 @@
   },
   "editions": [
     {
-      "description": "ESNext source code for Node.js 10 || 12 || 14 with Require for modules",
+      "description": "ESNext source code for Node.js 10 || 12 || 14 || 16 with Require for modules",
       "directory": "source",
       "entry": "index.js",
       "tags": [
@@ -89,7 +89,7 @@
         "require"
       ],
       "engines": {
-        "node": "10 || 12 || 14"
+        "node": "10 || 12 || 14 || 16"
       }
     }
   ],
@@ -99,16 +99,16 @@
     "cli-spinners": "^2.6.0"
   },
   "devDependencies": {
-    "@bevry/update-contributors": "^1.18.0",
-    "assert-helpers": "^8.2.0",
+    "@bevry/update-contributors": "^1.19.0",
+    "assert-helpers": "^8.4.0",
     "eslint": "^7.31.0",
-    "eslint-config-bevry": "^3.23.0",
+    "eslint-config-bevry": "^3.27.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "jsdoc": "^3.6.7",
-    "kava": "^5.14.0",
+    "kava": "^5.15.0",
     "prettier": "^2.3.2",
-    "projectz": "^2.18.0",
+    "projectz": "^2.22.0",
     "surge": "^0.23.0",
     "valid-directory": "^3.7.0"
   },
