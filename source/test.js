@@ -50,7 +50,7 @@ kava.suite('spinner-title', function (suite, test) {
 				data,
 				['a', 'b', 'a', 'b', 'a']
 					.map((frame) => spinner.open + '[' + frame + ']' + spinner.close)
-					.join('')
+					.join(''),
 			)
 			equal(updates, 5, 'title was called correctly')
 			complete()
