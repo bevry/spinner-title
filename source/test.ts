@@ -1,19 +1,24 @@
-'use strict'
+// external
+import { equal, undef } from 'assert-helpers'
+import kava from 'kava'
 
-const spinners = require('cli-spinners')
-const Spinner = require('./index.js')
-const { equal } = require('assert-helpers')
-const kava = require('kava')
-const { PassThrough } = require('stream')
+// builtin
+import { PassThrough } from 'stream'
+import { stdout, stderr } from 'process'
 
+// us
+import spinners from 'cli-spinners'
+import Spinner from './index.js'
+
+// tests
 kava.suite('spinner-title', function (suite, test) {
 	suite('options', function (suite, test) {
 		test('defaults', function () {
 			const spinner = new Spinner()
 			equal(spinner.frames, spinners.dots.frames, 'dots is the default')
 			equal(spinner.interval, spinners.dots.interval, 'dots is the default')
-			equal(spinner.title, null, 'title is null')
-			equal(spinner.stream, process.stderr, 'stderr is the default')
+			undef(spinner.title, 'title is null')
+			equal(spinner.stream, stderr, 'stderr is the default')
 		})
 		test('changing style', function () {
 			const spinner = new Spinner({ style: 'monkey' })
@@ -32,16 +37,20 @@ kava.suite('spinner-title', function (suite, test) {
 			equal(spinner.interval, spinners.monkey.interval, 'monkey was used')
 		})
 		test('ovewrite strean', function () {
-			const spinner = new Spinner({ stream: process.stdout })
-			equal(spinner.stream, process.stdout, 'monkey was used')
+			const spinner = new Spinner({ stream: stdout })
+			equal(spinner.stream, stdout, 'monkey was used')
 		})
 	})
 	test('title works', function (complete) {
-		const stream = new PassThrough(),
-			frames = ['a', 'b']
+		const frames = ['a', 'b']
 		let data = '',
-			updates = 0,
-			spinner = null
+			updates = 0
+		function title(this: Spinner) {
+			++updates
+			return '[' + this.spin() + ']'
+		}
+
+		const stream = new PassThrough()
 		stream.on('data', (chunk) => {
 			data += chunk.toString()
 		})
@@ -55,11 +64,8 @@ kava.suite('spinner-title', function (suite, test) {
 			equal(updates, 5, 'title was called correctly')
 			complete()
 		})
-		function title() {
-			++updates
-			return '[' + this.spin() + ']'
-		}
-		spinner = new Spinner({ title, frames, stream, interval: 100 })
+
+		const spinner = new Spinner({ title, frames, stream, interval: 100 })
 		spinner.update()
 		equal(updates, 1, 'title was called manually correctly')
 
